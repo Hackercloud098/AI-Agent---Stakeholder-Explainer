@@ -1,0 +1,19 @@
+{
+  "type": "perf_regression",
+  "system": "feature-store-sync-job",
+  "timestamp_utc": "2026-01-02T08:05:00Z",
+  "signals": {
+    "error_rate": 0.02,
+    "p50_latency_ms": 450,
+    "p95_latency_ms": 1900,
+    "requests_per_min": 80,
+    "cost_per_1k_requests_usd": 0.65
+  },
+  "raw_text": "After enabling additional feature joins, p95 latency increased from ~900ms to ~1900ms. Error rate stable. CPU throttling warnings seen intermittently. No outage, but SLA for downstream scoring job is at risk.",
+  "context": {
+    "recent_change": "enabled extra joins in feature pipeline",
+    "customer_impact_hint": "Risk of delayed scoring impacts time-sensitive dashboards",
+    "environment": "prod",
+    "service_owner": "Data Engineering"
+  }
+}

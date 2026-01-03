@@ -1,0 +1,16 @@
+{
+  "type": "model_update",
+  "system": "match-outcome-predictor",
+  "timestamp_utc": "2026-01-01T12:00:00Z",
+  "signals": {
+    "p95_latency_ms": 420,
+    "cost_per_1k_requests_usd": 0.18
+  },
+  "raw_text": "New XGBoost model trained on last 8 weeks rolling features. Offline AUC improved 0.74 -> 0.77. Calibration slightly worse on underdogs. Proposed rollout: 10% traffic canary. No production incident.",
+  "context": {
+    "recent_change": "retrained with updated rolling window features",
+    "customer_impact_hint": "Potential uplift in prediction accuracy; monitor risk of miscalibration",
+    "environment": "staging",
+    "service_owner": "Applied ML"
+  }
+}
